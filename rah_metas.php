@@ -94,6 +94,27 @@
 		return implode(n,$out);
 	}
 
+	function rah_meta_description($atts=array()) {
+		global $is_article_list, $thisarticle;
+		
+		$atts = 
+			lAtts(array(
+				'description' => '',
+				'description_from' => 'excerpt,body',
+				'description_trail' => '&hellip;',
+				'description_replacement' => '',
+				'escape' => '',
+				'maxchars' => '250',
+				'words' => '25',
+			),$atts)
+		;
+
+		extract($atts);
+
+		$r = new rah_metas_pkg();
+		return $r->description($atts);
+	}
+
 class rah_metas_pkg {
 	
 	/**
