@@ -62,7 +62,7 @@ Example: @description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 
 p. *description_from*
 Which artile field is used for the automatic meta description. The attribute takes comma separated list of fields. The first field in the list that isn't empty is used as the meta description. Available values: @body@, @excerpt@ or custom field's name. If set empty, the automatic description isn't used.
-Example: @description_from="body,excerpt,metadescription"@  Default: @"body,excerpt"@
+Example: @description_from="metadescription,excerpt,body"@  Default: @"body,excerpt"@
 
 p. *words*
 Limits the amount of words shown in the automatic meta description.
